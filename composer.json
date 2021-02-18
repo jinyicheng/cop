@@ -1,0 +1,23 @@
+{
+    "name": "jinyicheng/cop",
+    "description": "COSCOShipping COP SDK For Laravel",
+    "type": "library",
+    "keywords": [
+        "COP","SDK","Laravel"
+    ],
+    "homepage": "https://github.com/jinyicheng/cop/",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.2",
+        "ext-openssl": "*"
+    },
+    "authors": [
+        {
+            "name": "jinyicheng",
+            "email": "234067496@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "COP\\Client\\" : "src/" }
+    }
+}
