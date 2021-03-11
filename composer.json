@@ -3,7 +3,9 @@
     "description": "COSCOShipping COP SDK For Laravel",
     "type": "library",
     "keywords": [
-        "COP","SDK","Laravel"
+        "COP",
+        "SDK",
+        "Laravel"
     ],
     "homepage": "https://github.com/jinyicheng/cop/",
     "license": "MIT",
@@ -18,13 +20,15 @@
         }
     ],
     "autoload": {
-        "psr-4": { "jinyicheng\\cop\\" : "src/" }
+        "psr-4": {
+            "jinyicheng\\cop\\": "src/"
+        }
     },
     "extra": {
-        "tinker": {
-            "config": {
-                "cop": "config/cop.php"
-            }
+        "laravel": {
+            "providers": [
+                "jinyicheng\\cop\\ClientServiceProvider"
+            ]
         }
     }
 }

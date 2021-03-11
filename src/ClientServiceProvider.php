@@ -18,7 +18,7 @@ use Illuminate\Support\ServiceProvider;
  * @author   jinyicheng
  * @link     https://github.com/jinyicheng/cop
  */
-class ClientProvider extends ServiceProvider
+class ClientServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
