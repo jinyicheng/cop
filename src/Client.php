@@ -9,7 +9,7 @@
  * @link     https://github.com/jinyicheng/cop
  */
 
-namespace COP;
+namespace jinyicheng\cop;
 
 use GuzzleHttp\Middleware;
 use Psr\Http\Message\UriInterface;
@@ -17,10 +17,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Client
- *
- * @category Class
- * @package  COP\Client
+ * Class Client
+ * @package jinyicheng\cop
  * @author   jinyicheng
  * @link     https://github.com/jinyicheng/cop
  */
