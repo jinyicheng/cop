@@ -9,7 +9,7 @@
  * @link     https://github.com/jinyicheng/cop
  */
 
-namespace COP\Client;
+namespace COP;
 
 use GuzzleHttp\Middleware;
 use Psr\Http\Message\UriInterface;
@@ -17,7 +17,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * COPClient
+ * Client
  *
  * @category Class
  * @package  COP\Client
@@ -33,7 +33,7 @@ class Client
 
     public function __construct()
     {
-        $environment = env('cop.' . env('cop.development'));
+        $environment = config('cop.environments.' . config('cop.current_environment'));
         $this->setApiKey($environment['api_key']);
         $this->setSecretKey($environment['secret_key']);
         $this->setBaseUri($environment['base_uri']);
@@ -150,7 +150,7 @@ class Client
     {
         $encodedBody = json_encode($body, JSON_UNESCAPED_UNICODE);
         $this->setApiRequestHeaders($method, $requestUri, $encodedBody);
-        $client = new Client([
+        $client = new \GuzzleHttp\Client([
             'base_uri' => $this->getBaseUri()
         ]);
         return $client->request($method, $requestUri, [
@@ -180,7 +180,7 @@ class Client
         return json_decode($this->request('POST', '/service/synconhub/common/port/search', [
             "keywords" => $cityName,
             "page" => 1,
-            "size" => 30
+            "size" => 10
         ]), true);
     }
 
@@ -202,6 +202,7 @@ class Client
             "page" => 1,
             "size" => 20
         ];
+        dd($data);
         return json_decode($this->request('POST', '/service/synconhub/product/instantBooking/search', $data), true);
     }
 
