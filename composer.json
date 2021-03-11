@@ -21,7 +21,7 @@
         "psr-4": { "jinyicheng\\cop\\" : "src/" }
     },
     "extra": {
-        "laravel": {
+        "tinker": {
             "config": {
                 "cop": "config/cop.php"
             }
