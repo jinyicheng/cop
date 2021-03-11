@@ -19,5 +19,12 @@
     ],
     "autoload": {
         "psr-4": { "COP\\Client\\" : "src/" }
+    },
+    "extra": {
+        "laravel": {
+            "config": {
+                "cop": "config/cop.php"
+            }
+        }
     }
 }
