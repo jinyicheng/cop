@@ -18,7 +18,7 @@
         }
     ],
     "autoload": {
-        "psr-4": { "COP\\" : "src/" }
+        "psr-4": { "jinyicheng\\COP\\" : "src/" }
     },
     "extra": {
         "laravel": {
