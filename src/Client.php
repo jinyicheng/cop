@@ -200,7 +200,6 @@ class Client
             "page" => 1,
             "size" => 20
         ];
-        dd($data);
         return json_decode($this->request('POST', '/service/synconhub/product/instantBooking/search', $data), true);
     }
 
